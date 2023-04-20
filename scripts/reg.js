@@ -12,12 +12,16 @@ $(".show-password").on("click", function () {
 });
 
 document.body.addEventListener("mouseenter", function (e) {
-    let cursor = $("span.cursor");
-    cursor.css("opacity", "1");
+    if (window.screen.availWidth > 425) {
+        let cursor = $("span.cursor");
+        cursor.css("opacity", "1");
+    }
 });
 document.body.addEventListener("mouseleave", function (e) {
-    let cursor = $("span.cursor");
-    cursor.css("opacity", "0");
+    if (window.screen.availWidth > 425) {
+        let cursor = $("span.cursor");
+        cursor.css("opacity", "0");
+    }
 });
 document.body.addEventListener("mousemove", function (e) {
     const div = 10;
@@ -30,9 +34,10 @@ document.body.addEventListener("mousemove", function (e) {
     let y = e.pageY;
     form.css("--this-box-shadow-x", `${parseInt((centerX - x) / div)}px`);
     form.css("--this-box-shadow-y", `${parseInt((centerY - y) / div)}px`);
-
-    cursor.css({
-        top: y + "px",
-        left: x + "px",
-    });
+    if (window.screen.availWidth > 425) {
+        cursor.css({
+            top: y + "px",
+            left: x + "px",
+        });
+    }
 });
