@@ -1,0 +1,76 @@
+.form {
+    font-family: "Cambo", serif;
+    background-color: var(--plt1-color-7-);
+    width: 20rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    top: 20vh;
+    position: absolute;
+    box-shadow: var(--this-box-shadow-x) var(--this-box-shadow-y) 10px var(--plt1-color-5-);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--plt1-bg-color-);
+    width: 90vw;
+    height: 90vh;
+}
+
+.form label {
+    margin: 1.8rem 0 0.4rem 0rem;
+    font-size: 1rem;
+    color: var(--plt1-color-6-);
+}
+.form div:not(#title, .send-button) {
+    display: flex;
+    align-items: flex-end;
+}
+.form div:not(#title, .send-button) input {
+    width: 100%;
+}
+
+.form input,
+.form .send-button {
+    outline: none;
+    padding: 0.5rem;
+    width: auto;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--plt1-color-2-);
+}
+.form .send-button {
+    background-color: var(--plt1-color-6-);
+    color: var(--plt1-color-4-);
+    text-align: center;
+    margin: 2rem 0 0.4rem 0rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.form #title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.show-password {
+    display: block;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.show-password i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--plt1-color-6-);
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        width: auto;
+        height: auto;
+        background-color: var(--plt1-color-2-);
+    }
+}

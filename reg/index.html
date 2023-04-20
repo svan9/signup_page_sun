@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="../scripts/jquery.cookie.js"></script>
+        <link rel="shortcut icon" href="source/ico/d2a.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="../styles/env.css" />
+        <link rel="stylesheet" href="../styles/reg.css" />
+        <script src="../scripts/reg.js" defer></script>
+        <title>sign up</title>
+    </head>
+    <body   >
+        <div class="form" style="--this-box-shadow-x: -10px; --this-box-shadow-y: 10px">
+            <div id="title">
+                <label>sign up</label>
+            </div>
+            <label>account name</label>
+            <div id="name">
+                <input type="text" />
+            </div>
+            <label>password</label>
+            <div id="password">
+                <input type="password" />
+                <div class="show-password" parent="#password > input" hide="false">
+                    <i class="fi fi-rr-eye"></i>
+                </div>
+            </div>
+            <label>password check</label>
+            <div id="password-check">
+                <input type="password" />
+                <div class="show-password" parent="#password-check > input" hide="false">
+                    <i class="fi fi-rr-eye"></i>
+                </div>
+            </div>
+            <div class="send-button">send</div>
+        </div>
+        <span class="cursor"></span>
+    </body>
+</html>
