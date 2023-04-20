@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--plt1-bg-color-);
+    margin: 0;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;    
+    animation: bgsun 10s infinite;
+}
+
+.circle img {
+    width: 2rem;
+}
+.circle {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 100%;
+    align-items: center;
+    animation: rotate 10s infinite;
+}
+
+.center {
+    position: absolute;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+.circ {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background-color: #227d1a;
+    text-align: center;
+    position: absolute;
+    animation: circ 10s infinite;
+    box-shadow: 0px 0px 20px 10px #29937000;
+}
+
+@keyframes circ {
+    40% {
+        background-color: #298593;
+        box-shadow: 0px 0px 20px 10px #299370FF;
+    }
+    60% {
+        background-color: #298593;
+    }
+    80% {
+        box-shadow: 0px 0px 20px 10px #29937000;
+        background-color: #227d1a;
+    }
+    100% {
+        background-color: #227d1a;
+    }
+}
+
+@keyframes rotate {
+    40% {
+        transform: rotate(180deg);
+    }
+    60% {
+        transform: rotate(180deg);
+    }
+    80% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bgsun {
+    40% {
+        background-color: var(--plt1-bg-2-color-);
+    }
+    60% {
+        background-color: var(--plt1-bg-2-color-);
+    }
+    80% {
+        background-color: var(--plt1-bg-color-);
+    }
+    100% {
+        background-color: var(--plt1-bg-color-);
+    }
+}
+
+
