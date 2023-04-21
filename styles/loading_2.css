@@ -18,7 +18,11 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 2rem;
+    max-width: 20rem;
+    max-height: 10rem;
+    text-align: center;
     color: #ffffff;
+    overflow: auto;
 }
 
 .book {
@@ -41,7 +45,7 @@ body {
     border-width: 0.5rem 0px 0.5rem 0.5rem;
     transform-origin: right;
     opacity: 0%;
-    animation: linear page-rotate 1s infinite;
+    animation: linear page-rotate 2s infinite;
 }
 
 @keyframes page-rotate {

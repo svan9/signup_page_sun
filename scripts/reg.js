@@ -41,3 +41,13 @@ document.body.addEventListener("mousemove", function (e) {
         });
     }
 });
+const gotos = (path) => (document.location.href = document.location.origin + path);
+
+
+$(".send-button").on("click", function () {
+    const name = $("#name > input").val();
+    // const password = $("#password > input").val();
+    $.cookie("name", name);
+    gotos("/loading_2");
+});
+
