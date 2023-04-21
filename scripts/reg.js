@@ -41,8 +41,12 @@ document.body.addEventListener("mousemove", function (e) {
         });
     }
 });
-const gotos = (path) => (document.location.href = document.location.origin + path);
-
+const gotos = (path) =>
+    (document.location.href =
+        document.location.href.replace(
+            /\/([^\/]*)\/$/gm.exec(document.location.href)[0],
+            ""
+        ) + path);
 
 $(".send-button").on("click", function () {
     const name = $("#name > input").val();
@@ -50,4 +54,3 @@ $(".send-button").on("click", function () {
     $.cookie("name", name);
     gotos("/loading_2");
 });
-
