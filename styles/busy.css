@@ -1,0 +1,88 @@
+@import url(./env.css);
+
+:root {
+    --bb-size: 5rem;
+}
+
+body {
+    display: flex;
+    background-color: var(--plt1-bg-color-);
+    font-family: "Cambo", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--plt1-color-6-);
+    font-size: 2rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > * {
+    margin: 3rem;
+}
+
+label {
+    text-align: center;
+}
+
+.box {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+.box > * {
+    /* position: absolute; */
+    margin: 1rem;
+}
+
+.box .left {
+    z-index: 5;
+    background-color: red;
+    width: var(--bb-size);
+    height: var(--bb-size);
+    animation: 10s kf1 ease-in-out infinite;
+    transform: perspective(200px) rotate3d(0, 1, 0, 120deg) translate3d(2rem, 0rem, 0rem);
+    animation-delay: 1.5s;
+}
+.box .right {
+    z-index: 4;
+    background-color: blue;
+    width: var(--bb-size);
+    height: var(--bb-size);
+    animation: 10s kf1 ease-in-out infinite;
+    transform: perspective(200px) rotate3d(0, 1, 0, 120deg) translate3d(2rem, 0rem, 0rem);
+    animation-delay: 1s;
+}
+.box .top {
+    z-index: 3;
+    background-color: green;
+    width: var(--bb-size);
+    height: var(--bb-size);
+    animation: 10s kf1 ease-in-out infinite;
+    transform: perspective(200px) rotate3d(0, 1, 0, 120deg) translate3d(2rem, 0rem, 0rem);
+    animation-delay: 0.5s;
+}
+.box .bottom {
+    z-index: 2;
+    background-color: orange;
+    width: var(--bb-size);
+    height: var(--bb-size);
+    animation: 10s kf1 ease-in-out infinite;
+    transform: perspective(200px) rotate3d(0, 1, 0, 120deg) translate3d(2rem, 0rem, 0rem);
+    animation-delay: 0s;
+}
+
+@keyframes kf1 {
+    40% {
+        transform: perspective(200px) rotate3d(0, 1, 0, 180deg)
+            translate3d(2rem, 0rem, 0rem);
+    }
+    60% {
+        transform: perspective(600px) rotate3d(0, 1, 0, 120deg)
+            translate3d(-10rem, 0rem, 0rem);
+    }
+    80% {
+        transform: perspective(800px) rotate3d(0, 1, 0, 360deg)
+            translate3d(1.5rem, 0rem, 0rem);
+    }
+}

@@ -12,7 +12,7 @@
         <script src="../scripts/reg.js" defer></script>
         <title>sign up</title>
     </head>
-    <body   >
+    <body>
         <div class="form" style="--this-box-shadow-x: -10px; --this-box-shadow-y: 10px">
             <div id="title">
                 <label>sign up</label>
@@ -29,12 +29,26 @@
                 </div>
             </div>
             <label>password check</label>
-            <div id="password-check">
+            <div id="password-check" class="error matches">
                 <input type="password" />
                 <div class="show-password" parent="#password-check > input" hide="false">
                     <i class="fi fi-rr-eye"></i>
                 </div>
             </div>
+            <label
+                class="error-match"
+                style="
+                    margin: 0px;
+                    color: var(--plt1-error-2-);
+                    font-size: 0.9rem;
+                    font-style: italic;
+                    text-align: right;
+                    text-shadow: 0px 0px 0px var(--plt1-error-1-);
+                "
+                hidden
+            >
+                passwords don't match!
+            </label>
             <div class="send-button">send</div>
         </div>
         <span class="cursor"></span>
